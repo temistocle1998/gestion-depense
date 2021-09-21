@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Depense } from '../depense/depense';
 
-// User interface
+// User interfacedepense
 export class User {
   name: String;
   email: String;
@@ -36,4 +37,23 @@ export class AuthService {
   currentDepense(): Observable<any> {
     return this.http.get('http://127.0.0.1:8000/api/auth/currentRevenu');
   }
+
+  // add new depense
+  addDepense(depense: Depense): Observable<any> {
+    return this.http.post('http://127.0.0.1:8000/api/auth/depense', depense);
+  }
+
+  // Access current depense
+  getAllDepenseByUser(): Observable<any> {
+    return this.http.get('http://127.0.0.1:8000/api/auth/depense');
+  }
+
+    // Access current depense
+    getAllCategorie(): Observable<any> {
+      return this.http.get('http://127.0.0.1:8000/api/categorie');
+    }
+
+    getTotalDepense(): Observable<any> {
+      return this.http.get('http://127.0.0.1:8000/api/auth/depense-actuel');
+    }
 }

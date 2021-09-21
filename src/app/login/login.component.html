@@ -1,43 +1,27 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-	<!-- <script src="https://kit.fontawesome.com/a81368914c.js"></script> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-	<img class="wave" src="assets/img/wave.png">
-	<div class="container">
-		<div class="img">
-			<img src="assets/img/bg.svg">
-		</div>
-		<div class="login-content">
-			<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-				<img src="assets/img/avatar.svg">
-				<h2 class="title">Bienvenue</h2>
-           		<div class="input-div one">
-           		   <div class="i">
-           		   		<i class="fas fa-envelope"></i>
-           		   </div>
-           		   <div class="div">
-           		   		<h5>Email</h5>
-           		   		<input type="email" class="input" formControlName="email">
-           		   </div>
-           		</div>
-           		<div class="input-div pass">
-           		   <div class="i">
-           		    	<i class="fas fa-lock"></i>
-           		   </div>
-           		   <div class="div">
-           		    	<h5>Password</h5>
-           		    	<input type="password" class="input" formControlName="password">
-            	   </div>
-            	</div>
-            	<a href="#">Forgot Password?</a>
-            	<input type="submit" class="btn" value="Login">
-            </form>
+<div class="row lyear-wrapper" style="background-image: url(assets/theme/images/login-bg.jpg); background-size: cover;">
+  <div class="lyear-login">
+    <div class="login-center">
+      <div class="login-header text-center">
+        <a href="#"> <img alt="light year admin" src="assets/theme/images/logo-sidebar.png"> </a>
+      </div>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group has-feedback feedback-left">
+          <input type="text" placeholder="email" formControlName="email" class="form-control" name="email" id="email" />
+          <span class="mdi mdi-account form-control-feedback" aria-hidden="true"></span>
         </div>
+        <div class="form-group has-feedback feedback-left">
+          <input type="password" placeholder="mot de passe" class="form-control" formControlName="password" id="password" name="password" />
+          <span class="mdi mdi-lock form-control-feedback" aria-hidden="true"></span>
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-block btn-primary" type="submit">Se connecter</button>
+        </div>
+      </form>
+      <hr>
+      <footer class="col-sm-12 text-center">
+        <p class="m-b-0">Copyright © 2019 <a href="http://lyear.itshubao.com">IT书包</a>. All right reserved</p>
+      </footer>
     </div>
-</body>
-</html>
+  </div>
+</div>

@@ -1,2 +1,18 @@
-
+<!-- <app-depense-view></app-depense-view>
+<div class="container" *ngIf="isSignedIn">
+  <ul class="nav">
+    <li class="nav-item" *ngIf="isSignedIn">
+      <a class="nav-link" routerLink="/profile">User Profile</a>
+    </li>
+    <li class="nav-item" *ngIf="!isSignedIn" >
+      <a class="nav-link" routerLink="/login">Log in</a>
+    </li>
+    <li class="nav-item" >
+      <a class="nav-link" routerLink="/register">Register</a>
+    </li>
+  </ul>
+  <button class="btn btn-outline-primary" (click)="signOut()" *ngIf="isSignedIn">Log out</button>
+</div> -->
+<!-- <app-nav-bar *ngIf="isSignedIn"></app-nav-bar> -->
+<!-- <app-header></app-header> -->
 <router-outlet></router-outlet>

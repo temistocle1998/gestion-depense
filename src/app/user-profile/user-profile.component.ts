@@ -20,6 +20,7 @@ export class UserProfileComponent implements OnInit {
 
   UserProfile: User;
   CurrentDepense: Depense;
+  TotalDepense: Depense;
 
   constructor(public authService: AuthService, public tokenService: TokenService, public router: Router) {
     if (this.tokenService.isLoggedIn()) {
@@ -29,6 +30,10 @@ export class UserProfileComponent implements OnInit {
       this.authService.currentDepense().subscribe((data:any) => {
         this.CurrentDepense = data
         console.log(this.CurrentDepense)
+      })
+      this.authService.getTotalDepense().subscribe((data:any) => {
+        this.TotalDepense = data
+        console.log(this.TotalDepense)
       })
     }
     else
