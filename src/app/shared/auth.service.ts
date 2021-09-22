@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, ObservableLike } from 'rxjs';
+import { Categorie } from '../categorie/categorie';
 import { Depense } from '../depense/depense';
+import { Revenu } from '../revenu/revenu';
 
 // User interfacedepense
 export class User {
@@ -53,7 +55,32 @@ export class AuthService {
       return this.http.get('http://127.0.0.1:8000/api/categorie');
     }
 
+    AddCategorie(categorie: Categorie): Observable<any> {
+      return this.http.post('http://127.0.0.1:8000/api/categorie', categorie);
+    }
+
     getTotalDepense(): Observable<any> {
       return this.http.get('http://127.0.0.1:8000/api/auth/depense-actuel');
     }
+
+    getNombreCategorie(): Observable<any> {
+      return this.http.get('http://127.0.0.1:8000/api/getNombreCategorie');
+    }
+
+    AllRevenuByUser(): Observable<any> {
+      return this.http.get('http://127.0.0.1:8000/api/auth/AllRevenuByUser');
+    }
+
+    AllRevenuByMonth(): Observable<any> {
+      return this.http.get('http://127.0.0.1:8000/api/auth/revenuMois');
+    }
+
+    AddRevenu(revenu: Revenu): Observable<any> {
+      return this.http.post('http://127.0.0.1:8000/api/auth/revenu', revenu);
+    }
+
+    getTypeRevenu(): Observable<any> {
+      return this.http.get('http://127.0.0.1:8000/api/getTypeRevenu');
+    }
+
 }

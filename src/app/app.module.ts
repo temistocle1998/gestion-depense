@@ -13,8 +13,10 @@ import { DepenseViewComponent } from './depense/depense-view/depense-view.compon
 import { DepenseItemComponent } from './depense/depense-item/depense-item.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { CategorieComponent } from './categorie/categorie.component';
 import { HeaderComponent } from './header/header.component';
+import { RevenuComponent } from './revenu/revenu.component';
+import { CategorieViewComponent } from './categorie/categorie-view/categorie-view.component';
+import { CategorieItemComponent } from './categorie/categorie-item/categorie-item.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,9 +27,11 @@ import { HeaderComponent } from './header/header.component';
     DepenseItemComponent,
     NavBarComponent,
     DashboardComponent,
-    CategorieComponent,
-    HeaderComponent
-  ],
+    HeaderComponent,
+    RevenuComponent,
+    CategorieViewComponent,
+    CategorieItemComponent
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,

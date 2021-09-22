@@ -4,7 +4,7 @@
 
       <!-- logo -->
       <div id="logo" class="sidebar-header">
-        <a href="/"><img src="assets/theme/images/logo-sidebar.png" title="LightYear" alt="LightYear" /></a>
+        <a href="/">Gestion depense</a>
       </div>
       <div class="lyear-layout-sidebar-scroll">
 
@@ -15,20 +15,20 @@
             <li class="nav-item nav-item-has-subnav">
               <a href="javascript:void(0)"><i class="mdi mdi-palette"></i> <span>Budget</span></a>
               <ul class="nav nav-subnav">
-                <li> <a class="multitabs" href="">Mes revenus</a> </li>
+                <li> <a class="multitabs" routerLink="/ajout-revenu">Ajouter revenu</a> </li>
               </ul>
             </li>
             <li class="nav-item nav-item-has-subnav">
               <a href="javascript:void(0)"><i class="mdi mdi-tag"></i> <span>Categories</span></a>
               <ul class="nav nav-subnav">
-                <li> <a class="multitabs" href="">基本元素</a> </li>
+                <li> <a class="multitabs" routerLink="/categories">voir categories</a> </li>
               </ul>
             </li>
           </ul>
         </nav>
 
         <div class="sidebar-footer">
-          <p class="copyright">Copyright &copy; 2021. <a target="_blank" href="https://lyear.itshubao.com">IT书包</a> All
+          <p class="copyright">Copyright &copy; 2021. <a target="_blank" href="#">SOCE & LAMINE</a> All
             rights reserved.</p>
         </div>
       </div>
@@ -62,7 +62,7 @@
                 <li> <a class="multitabs" data-url="" href="javascript:void(0)"><i class="mdi mdi-lock-outline"></i>Mot
                     de passe</a> </li>
                 <li class="divider"></li>
-                <li> <a href="#"><i class="mdi mdi-logout-variant"></i>Se deconnecter</a> </li>
+                <li> <a href="" (click)="signOut()"><i class="mdi mdi-logout-variant"></i>Se deconnecter</a> </li>
               </ul>
             </li>
             <!--切换主题配色-->

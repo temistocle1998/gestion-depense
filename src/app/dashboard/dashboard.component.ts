@@ -13,6 +13,7 @@ export class DashboardComponent implements OnInit {
 
   UserProfile: User;
   CurrentDepense: Depense;
+  NombreCategorie: any;
 
   constructor(public authService: AuthService, public tokenService: TokenService, public router: Router) {
     if (this.tokenService.isLoggedIn()) {
@@ -22,6 +23,10 @@ export class DashboardComponent implements OnInit {
       this.authService.currentDepense().subscribe((data:any) => {
         this.CurrentDepense = data
         console.log(this.CurrentDepense)
+      })
+      this.authService.getNombreCategorie().subscribe((data:any) => {
+        this.NombreCategorie = data
+        console.log(this.NombreCategorie)
       })
     }
     else

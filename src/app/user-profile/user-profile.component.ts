@@ -21,6 +21,9 @@ export class UserProfileComponent implements OnInit {
   UserProfile: User;
   CurrentDepense: Depense;
   TotalDepense: Depense;
+  NombreCategorie:any;
+  AllRevenu: any;
+  AllRevenuByMois: any;
 
   constructor(public authService: AuthService, public tokenService: TokenService, public router: Router) {
     if (this.tokenService.isLoggedIn()) {
@@ -35,6 +38,21 @@ export class UserProfileComponent implements OnInit {
         this.TotalDepense = data
         console.log(this.TotalDepense)
       })
+      this.authService.getNombreCategorie().subscribe((data:any) => {
+        this.NombreCategorie = data
+        console.log(this.NombreCategorie)
+      })
+
+      this.authService.AllRevenuByUser().subscribe((data:any) => {
+        this.AllRevenu = data
+        console.log(this.AllRevenu)
+      })
+
+
+      this.authService.AllRevenuByMonth().subscribe((data:any) => {
+        this.AllRevenuByMois = data
+        console.log(this.AllRevenuByMois)
+      })
     }
     else
       this.router.navigate(['login']);
@@ -44,5 +62,7 @@ export class UserProfileComponent implements OnInit {
 
   ngOnInit() {
   }
+
+
 
 }
