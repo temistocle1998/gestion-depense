@@ -9,9 +9,9 @@ const express = require('express');
 const app = express();
 app.use(requireHTTPS);
 
-app.use(express.static('./dist/gestion-depense.json>'));
+app.use(express.static('./dist/gestion-depense'));
 app.get('/*', function(req, res) {
-  res.sendFile('index.html', {root: 'dist/gestion-depense.json>/'}
+  res.sendFile('index.html', {root: 'dist/gestion-depense/'}
 );
 });
 app.listen(process.env.PORT || 8080);
