@@ -4,7 +4,7 @@
       <div class="login-header text-center">
         <h3> Gestion Depense </h3>
       </div>
-      <form [formGroup]="loginForm">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="form-group has-feedback feedback-left">
           <input type="text" placeholder="email" formControlName="email" class="form-control" name="email" id="email" />
           <span class="mdi mdi-account form-control-feedback" aria-hidden="true"></span>
@@ -15,7 +15,7 @@
         </div>
 
         <div class="form-group" align="center">
-          <button class="btn btn-block btn-primary" (ngSubmit)="onSubmit()" type="submit">Se connecter</button>
+          <button type="submit" class="btn btn-block btn-primary"  >Se connecter</button>
           <a routerLink="/register">Créer un compte</a>
         </div>
       </form>
