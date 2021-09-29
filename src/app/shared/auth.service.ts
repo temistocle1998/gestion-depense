@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, ObservableLike } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Categorie } from '../categorie/categorie';
 import { Depense } from '../depense/depense';
 import { Revenu } from '../revenu/revenu';
@@ -22,65 +22,65 @@ export class AuthService {
 
    // User registration
    register(user: User): Observable<any> {
-    return this.http.post('https://pacific-headland-54911.herokuapp.com/api/auth/register', user);
+    return this.http.post('http://127.0.0.1:8000/api/auth/register', user);
   }
 
   // Login
   signin(user: User): Observable<any> {
-    return this.http.post<any>('https://pacific-headland-54911.herokuapp.com/api/auth/login', user);
+    return this.http.post<any>('http://127.0.0.1:8000/api/auth/login', user);
   }
 
   // Access user profile
   profileUser(): Observable<any> {
-    return this.http.get('https://pacific-headland-54911.herokuapp.com/api/auth/user-profile');
+    return this.http.get('http://127.0.0.1:8000/api/auth/user-profile');
   }
 
   // Access current depense
   currentDepense(): Observable<any> {
-    return this.http.get('https://pacific-headland-54911.herokuapp.com/api/auth/currentRevenu');
+    return this.http.get('http://127.0.0.1:8000/api/auth/currentRevenu');
   }
 
   // add new depense
   addDepense(depense: Depense): Observable<any> {
-    return this.http.post('https://pacific-headland-54911.herokuapp.com/api/auth/depense', depense);
+    return this.http.post('http://127.0.0.1:8000/api/auth/depense', depense);
   }
 
   // Access current depense
   getAllDepenseByUser(): Observable<any> {
-    return this.http.get('https://pacific-headland-54911.herokuapp.com/api/auth/depense');
+    return this.http.get('http://127.0.0.1:8000/api/auth/depense');
   }
 
     // Access current depense
     getAllCategorie(): Observable<any> {
-      return this.http.get('https://pacific-headland-54911.herokuapp.com/api/categorie');
+      return this.http.get('http://127.0.0.1:8000/api/categorie');
     }
 
     AddCategorie(categorie: Categorie): Observable<any> {
-      return this.http.post('https://pacific-headland-54911.herokuapp.com/api/categorie', categorie);
+      return this.http.post('http://127.0.0.1:8000/api/categorie', categorie);
     }
 
     getTotalDepense(): Observable<any> {
-      return this.http.get('https://pacific-headland-54911.herokuapp.com/api/auth/depense-actuel');
+      return this.http.get('http://127.0.0.1:8000/api/auth/depense-actuel');
     }
 
     getNombreCategorie(): Observable<any> {
-      return this.http.get('https://pacific-headland-54911.herokuapp.com/api/getNombreCategorie');
+      return this.http.get('http://127.0.0.1:8000/api/getNombreCategorie');
     }
 
     AllRevenuByUser(): Observable<any> {
-      return this.http.get('https://pacific-headland-54911.herokuapp.com/api/auth/AllRevenuByUser');
+      return this.http.get('http://127.0.0.1:8000/api/auth/AllRevenuByUser');
     }
 
     AllRevenuByMonth(): Observable<any> {
-      return this.http.get('https://pacific-headland-54911.herokuapp.com/api/auth/revenuMois');
+      return this.http.get('http://127.0.0.1:8000/api/auth/revenuMois');
     }
 
     AddRevenu(revenu: Revenu): Observable<any> {
-      return this.http.post('https://pacific-headland-54911.herokuapp.com/api/auth/revenu', revenu);
+      return this.http.post('http://127.0.0.1:8000/api/auth/revenu', revenu);
     }
 
     getTypeRevenu(): Observable<any> {
-      return this.http.get('https://pacific-headland-54911.herokuapp.com/api/getTypeRevenu');
+      return this.http.get('http://127.0.0.1:8000/api/getTypeRevenu');
     }
 
 }
