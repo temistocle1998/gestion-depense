@@ -28,14 +28,14 @@
                   <tr *ngFor="let depense of item?.depenses; let i=index">
                     <td>{{i+1}}</td>
                     <td>{{depense.description}}</td>
-                    <td>{{depense.categorie_id}}</td>
+                    <td>{{depense?.categorie.nom}}</td>
                     <td>{{depense.montant}}</td>
                     <td>{{depense.date}}</td>
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-xs btn-default" href="#!" title="editer" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
-                        <a class="btn btn-xs btn-default" href="#!" title="voir" data-toggle="tooltip"><i class="mdi mdi-eye"></i></a>
-                        <a class="btn btn-xs btn-default" href="#!" title="supprimer" data-toggle="tooltip"><i class="mdi mdi-window-close"></i></a>
+                        <a class="btn btn-xs btn-default" href="#" title="editer" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
+                        <a class="btn btn-xs btn-default" href="#" title="voir" data-toggle="tooltip"><i class="mdi mdi-eye"></i></a>
+                        <a class="btn btn-xs btn-default" href="#" title="supprimer" data-toggle="tooltip"><i class="mdi mdi-window-close"></i></a>
                       </div>
                     </td>
                   </tr>
