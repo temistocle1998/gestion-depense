@@ -30,7 +30,7 @@
                     <td>{{depense.description}}</td>
                     <td>{{depense?.categorie.nom}}</td>
                     <td>{{depense.montant}}</td>
-                    <td>{{depense.date}}</td>
+                    <td>{{depense.date | date: "dd:MMM:yyyy hh-mm-ss z"}}</td>
                     <td>
                       <div class="btn-group">
                         <a class="btn btn-xs btn-default" href="#" title="editer" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>

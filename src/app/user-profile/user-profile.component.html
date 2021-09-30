@@ -103,7 +103,7 @@
                   <td>{{item.id}}</td>
                   <td>{{item.montant}}</td>
                   <td>{{item?.type_revenu.intitule}}</td>
-                  <td>{{item.created_at}}</td>
+                  <td>{{item.created_at | date: "dd-MMM-yyyy hh:mm:ss "}}</td>
                 </tr>
               </tbody>
             </table>
