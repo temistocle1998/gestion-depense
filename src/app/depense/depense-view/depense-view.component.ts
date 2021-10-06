@@ -29,7 +29,6 @@ export class DepenseViewComponent implements OnInit {
         description: [''],
         categorie_id: [0]
       })
-    if (this.tokenService.isLoggedIn()) {
       this.authService.profileUser().subscribe((data:any) => {
         this.UserProfile = data;
       })
@@ -37,9 +36,6 @@ export class DepenseViewComponent implements OnInit {
         this.categories = data
         console.log(this.categories)
       })
-    }
-    else
-      this.router.navigate(['login']);
 
   }
 
