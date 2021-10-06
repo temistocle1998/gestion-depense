@@ -23,13 +23,10 @@ export class AppComponent implements OnInit {
     public token: TokenService,
   ) {
 
-    if (this.token.isLoggedIn()) {
       this.authService.profileUser().subscribe((data:any) => {
         this.UserProfile = data;
       })
-    }
-    else
-      this.router.navigate(['login']);
+
 
 
   }
