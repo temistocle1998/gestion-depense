@@ -30,8 +30,6 @@ export class AppComponent implements OnInit {
     }
     else
       this.router.navigate(['login']);
-
-
   }
 
   ngOnInit() {
