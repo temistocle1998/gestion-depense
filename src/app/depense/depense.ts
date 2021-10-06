@@ -4,7 +4,7 @@ export class Depense {
   description: String;
   categorie_id: Number;
   date: Date;
-  depenses:any
+  categorie:any
   constructor() {
 
   }

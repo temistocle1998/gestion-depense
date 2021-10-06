@@ -24,13 +24,13 @@
                     <th>ACTION</th>
                   </tr>
                 </thead>
-                <tbody *ngFor="let item of datas">
-                  <tr *ngFor="let depense of item?.depenses; let i=index">
+                <tbody>
+                  <tr *ngFor="let depense of datas; let i=index">
                     <td>{{i+1}}</td>
                     <td>{{depense.description}}</td>
-                    <td>{{depense?.categorie.nom}}</td>
+                    <td>{{depense?.nom}}</td>
                     <td>{{depense.montant}}</td>
-                    <td>{{depense.date | date: "dd:MMM:yyyy hh-mm-ss z"}}</td>
+                    <td>{{depense.created_at | date: "dd-MMM-yyyy hh:mm:ss "}}</td>
                     <td>
                       <div class="btn-group">
                         <a class="btn btn-xs btn-default" href="#" title="editer" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
