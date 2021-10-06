@@ -5,29 +5,6 @@ import { AuthStateService } from '../shared/auth-state.service';
 import { AuthService } from '../shared/auth.service';
 import { TokenService } from '../shared/token.service';
 
-function myTest() {
-const inputs = document.querySelectorAll(".input");
-
-
-function addcl(this: any){
-	let parent = this.parentNode.parentNode;
-	parent.classList.add("focus");
-}
-
-function remcl(this: any){
-	let parent = this.parentNode.parentNode;
-	if(this.value == ""){
-		parent.classList.remove("focus");
-	}
-}
-
-
-inputs.forEach(input => {
-	input.addEventListener("focus", addcl);
-	input.addEventListener("blur", remcl);
-});
-}
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -53,7 +30,6 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    myTest()
 
   }
 
