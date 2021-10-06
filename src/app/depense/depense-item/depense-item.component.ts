@@ -17,6 +17,7 @@ export class DepenseItemComponent implements OnInit {
   // @Input() depense: Depense;
 
   constructor(public authService: AuthService, public tokenService: TokenService, public router: Router) {
+    if (this.tokenService.isLoggedIn()) {
       this.authService.profileUser().subscribe((data:any) => {
         this.UserProfile = data;
       })
@@ -24,7 +25,9 @@ export class DepenseItemComponent implements OnInit {
         this.datas = data
         console.log(this.datas)
       })
-
+    }
+    else
+      this.router.navigate(['login']);
 
   }
   ngOnInit(): void {

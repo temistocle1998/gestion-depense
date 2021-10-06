@@ -26,6 +26,7 @@ export class UserProfileComponent implements OnInit {
   AllRevenuByMois: any;
 
   constructor(public authService: AuthService, public tokenService: TokenService, public router: Router) {
+    if (this.tokenService.isLoggedIn()) {
       this.authService.profileUser().subscribe((data:any) => {
         this.UserProfile = data;
       })
@@ -52,7 +53,9 @@ export class UserProfileComponent implements OnInit {
         this.AllRevenuByMois = data
         console.log(this.AllRevenuByMois)
       })
-
+    }
+    else
+      this.router.navigate(['login']);
 
   }
 

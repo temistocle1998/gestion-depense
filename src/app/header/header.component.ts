@@ -14,10 +14,13 @@ export class HeaderComponent implements OnInit {
   UserProfile: User;
 
   constructor(public authService: AuthService, public tokenService: TokenService,private auth: AuthStateService,public router: Router) {
+    if (this.tokenService.isLoggedIn()) {
       this.authService.profileUser().subscribe((data:any) => {
         this.UserProfile = data;
       })
-
+    }
+    else
+      this.router.navigate(['login']);
 
   }
   ngOnInit(): void {

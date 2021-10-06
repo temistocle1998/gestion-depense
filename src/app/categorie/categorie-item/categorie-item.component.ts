@@ -19,10 +19,13 @@ export class CategorieItemComponent implements OnInit {
       this.registerForm = this.fb.group({
         nom: ['']
       })
+    if (this.tokenService.isLoggedIn()) {
       this.authService.profileUser().subscribe((data:any) => {
         this.UserProfile = data;
       })
-
+    }
+    else
+      this.router.navigate(['login']);
 
   }
 
