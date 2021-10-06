@@ -23,16 +23,13 @@ export class RevenuComponent implements OnInit {
         type_revenu_id: [''],
         categorie_id: [0]
       })
-    if (this.tokenService.isLoggedIn()) {
       this.authService.profileUser().subscribe((data:any) => {
         this.UserProfile = data;
       })
       this.authService.getTypeRevenu().subscribe((data:any) => {
         this.TypeRevenu = data;
       })
-    }
-    else
-      this.router.navigate(['login']);
+
 
   }
 

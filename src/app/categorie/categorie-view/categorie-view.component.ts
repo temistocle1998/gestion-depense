@@ -16,16 +16,13 @@ export class CategorieViewComponent implements OnInit {
   constructor(public authService: AuthService, public tokenService: TokenService, public router: Router
     ) {
 
-    if (this.tokenService.isLoggedIn()) {
       this.authService.profileUser().subscribe((data:any) => {
         this.UserProfile = data;
       })
       this.authService.getAllCategorie().subscribe((data:any) => {
         this.Categories = data;
       })
-    }
-    else
-      this.router.navigate(['login']);
+
 
   }
   ngOnInit(): void {

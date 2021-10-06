@@ -16,7 +16,6 @@ export class DashboardComponent implements OnInit {
   NombreCategorie: any;
 
   constructor(public authService: AuthService, public tokenService: TokenService, public router: Router) {
-    if (this.tokenService.isLoggedIn()) {
       this.authService.profileUser().subscribe((data:any) => {
         this.UserProfile = data;
       })
@@ -28,9 +27,7 @@ export class DashboardComponent implements OnInit {
         this.NombreCategorie = data
         console.log(this.NombreCategorie)
       })
-    }
-    else
-      this.router.navigate(['login']);
+
 
   }
   ngOnInit(): void {
