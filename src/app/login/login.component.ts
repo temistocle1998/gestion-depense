@@ -36,7 +36,6 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     this.authService.signin(this.loginForm.value).subscribe(
       result => {
-        this.responseHandler(result);
         console.log(this.responseHandler(result))
       },
       error => {
