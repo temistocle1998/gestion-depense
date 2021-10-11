@@ -33,7 +33,9 @@
               "node_modules/@fortawesome/fontawesome-free-webfonts/css/fontawesome.css"
 
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/sweetalert/dist/sweetalert.min.js",
+            ]
           },
           "configurations": {
             "production": {
