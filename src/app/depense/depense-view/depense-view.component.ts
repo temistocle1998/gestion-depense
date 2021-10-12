@@ -65,7 +65,6 @@ export class DepenseViewComponent implements OnInit {
 
   simpleAlert(){
     swal("Depense ajouté", "Continuer !", "success");
-
     }
 
 }
