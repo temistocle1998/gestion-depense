@@ -34,7 +34,7 @@
 
             ],
             "scripts": [
-              "node_modules/sweetalert/dist/sweetalert.min.js",
+              "node_modules/sweetalert/dist/sweetalert.min.js"
             ]
           },
           "configurations": {
