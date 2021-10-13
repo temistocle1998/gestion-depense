@@ -4,10 +4,8 @@ import { Router } from '@angular/router';
 import { AuthService } from 'src/app/shared/auth.service';
 import { TokenService } from 'src/app/shared/token.service';
 import { Depense } from '../depense';
-import * as _swal from 'sweetalert';
-import { SweetAlert } from 'sweetalert/typings/core';
+import Swal from 'sweetalert2/dist/sweetalert2.js';
 
-const swal: SweetAlert = _swal as any;
 
 class User {
   name:String;
@@ -64,7 +62,7 @@ export class DepenseViewComponent implements OnInit {
   }
 
   simpleAlert(){
-    swal("Depense ajouté", "Continuer !", "success");
+    Swal.fire("Depense ajouté", "Continuer !", "success");
     }
 
 }
