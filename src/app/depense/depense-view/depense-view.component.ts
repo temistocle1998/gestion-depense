@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { AuthService } from 'src/app/shared/auth.service';
 import { TokenService } from 'src/app/shared/token.service';
 import { Depense } from '../depense';
-import Swal from 'sweetalert2;
+import Swal from 'sweetalert2';
 
 class User {
   name:String;
