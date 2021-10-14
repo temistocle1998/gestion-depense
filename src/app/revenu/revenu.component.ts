@@ -31,6 +31,10 @@ export class RevenuComponent implements OnInit {
         this.TypeRevenu = data;
       })
 
+      if(!this.UserProfile){
+        this.router.navigate(['login']);
+      }
+
 
   }
 
