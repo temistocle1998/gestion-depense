@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService, User } from '../shared/auth.service';
 import { TokenService } from '../shared/token.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-revenu',
@@ -42,6 +43,7 @@ export class RevenuComponent implements OnInit {
     this.authService.AddRevenu(this.registerForm.value).subscribe(
       result => {
         console.log(result)
+        this.simpleAlert()
       },
       error => {
         this.errors = error.error;
@@ -51,6 +53,10 @@ export class RevenuComponent implements OnInit {
       }
     )
   }
+
+  simpleAlert(){
+    Swal.fire("Revenu ajouté", "Continuer !", "success");
+    }
 
 
 
