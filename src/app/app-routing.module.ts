@@ -7,6 +7,7 @@ import { DepenseItemComponent } from './depense/depense-item/depense-item.compon
 import { DepenseViewComponent } from './depense/depense-view/depense-view.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
+import { PersonnalComponent } from './personnal/personnal.component';
 import { RegisterComponent } from './register/register.component';
 import { RevenuComponent } from './revenu/revenu.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path : 'ajout-revenu', component: RevenuComponent},
   {path : 'categories', component: CategorieViewComponent},
   {path : 'add-categorie', component: CategorieItemComponent},
+  {path : 'mes-infos', component: PersonnalComponent},
 ];
 
 @NgModule({
