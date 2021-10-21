@@ -17,6 +17,7 @@ import { HeaderComponent } from './header/header.component';
 import { RevenuComponent } from './revenu/revenu.component';
 import { CategorieViewComponent } from './categorie/categorie-view/categorie-view.component';
 import { CategorieItemComponent } from './categorie/categorie-item/categorie-item.component';
+import { PersonnalComponent } from './personnal/personnal.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { CategorieItemComponent } from './categorie/categorie-item/categorie-ite
     HeaderComponent,
     RevenuComponent,
     CategorieViewComponent,
-    CategorieItemComponent
+    CategorieItemComponent,
+    PersonnalComponent
     ],
   imports: [
     BrowserModule,
