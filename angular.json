@@ -34,7 +34,9 @@
               "node_modules/@fortawesome/fontawesome-free-webfonts/css/fontawesome.css"
 
             ],
-            "scripts": []
+            "scripts": [
+              "assets/theme/js/jquery.min.js"
+            ]
           },
           "configurations": {
             "production": {
